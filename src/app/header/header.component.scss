@@ -1,0 +1,98 @@
+@font-face {
+  font-family: 'KyivType Sans';
+}
+
+:host::ng-deep .p-menubar {
+  border:none;
+  border-radius: 0;
+  height: 95px;
+  background-color: #B91616;
+}
+
+:host::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text {
+  color: #fff;
+  .p-menubar .p-menubar-root-list > .p-menuitem:hover {
+    background-color: #fff;
+    border-radius: 5px;
+    color: #000;
+  }
+}
+
+.header-logo {
+  text-decoration: none;
+  color: #fff;
+  font-family: "KyivType Sans",sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+
+
+
+
+//.nav-header {
+//  background-color: #B91616;
+//  color: #fff;
+//  height: 95px;
+//}
+//
+//.header-logo{
+//  color: #fff;
+//  text-decoration: none;
+//  font-family: "KyivType Sans",sans-serif;
+//  font-weight: 900;
+//  font-style: normal;
+//  line-height: 30px;
+//  font-size: 24px;
+//}
+//
+//.navbar {
+//  padding: 0;
+//}
+//
+//.navbar-nav .nav-link.active {
+//  display: inline-block;
+//  font-size: 16px;
+//  color: #fff;
+//  font-family: 'KyivType Sans', sans-serif;
+//  font-style: normal;
+//  font-weight: 500;
+//  line-height: 24px;
+//}
+//
+//.navbar-nav .nav-link.active:hover {
+//  background: #fff;
+//  color: #000;
+//  border-radius: 5px;
+//}
+//
+//.nav-items {
+//  list-style: none;
+//  display: flex;
+//}
+//
+//.nav-item {
+//  text-decoration: none;
+//  color: #fff;
+//  text-align: center;
+//}
+//
+//.nav-item:hover {
+//  background-color: #fff;
+//  height: 30px;
+//  width: 65px;
+//  color: #000;
+//  text-align: center;
+//}
+//
+//.nav-link {
+//
+//}
+//
+//
+//
+//
+//
+//
