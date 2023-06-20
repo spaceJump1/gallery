@@ -12,7 +12,7 @@ import { ScrollTopModule } from 'primeng/scrolltop';
 import { AvatarModule } from 'primeng/avatar';
 import { MainComponent } from './main/main.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
-
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 
 @NgModule({
@@ -29,7 +29,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     MenubarModule,
     InputTextModule,
     ScrollTopModule,
-    AvatarModule
+    AvatarModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
