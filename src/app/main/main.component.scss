@@ -12,4 +12,45 @@
 
 .main-header-p {
   text-align: center;
+  font-family: 'Geometria', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 45px;
 }
+
+.main-container {
+  position: relative;
+}
+
+.main-hello {
+  position: absolute;
+  top: 25%;
+  left: 27%;
+  z-index: 1;
+}
+
+.main-img {
+  margin-top: 20px; /* Добавьте отступ сверху, если нужно */
+  display: flex;
+  padding-right: 20px;
+}
+
+.col1 {
+  flex: 1;
+}
+
+.col2 {
+  flex: 2;
+}
+
+.first-img {
+  margin-bottom: 55px;
+}
+
+.left-img {
+  height: 280px;
+}
+
+
+

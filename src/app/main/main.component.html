@@ -1,9 +1,17 @@
 <div class="container-fluid">
   <div class="main-heading d-flex justify-content-center align-items-center">
-    <div class="main-hello">
-      <p class="main-header-p">Привет, мы галерея</p>
-      <h1 class="main-header">HvzeArt</h1>
+    <div class="main-container">
+      <div class="main-hello">
+        <p class="main-header-p">Привет, мы галерея</p>
+        <h1 class="main-header">HvzeArt.</h1>
+      </div>
+      <div class="main-img">
+        <div class="col1">
+          <img [src]="getSafeImgUrl('first img.jpg')" alt="" class="top-img left-img first-img">
+          <img [src]="getSafeImgUrl('second img.jpg')" alt="" class="top-img left-img">
+        </div>
+        <div class="col2"><img [src]="getSafeImgUrl('main img.jpg')" alt="" class="top-img"></div>
+      </div>
     </div>
   </div>
-
 </div>

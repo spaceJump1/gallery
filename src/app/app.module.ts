@@ -11,6 +11,7 @@ import { InputTextModule} from "primeng/inputtext";
 import { ScrollTopModule } from 'primeng/scrolltop';
 import { AvatarModule } from 'primeng/avatar';
 import { MainComponent } from './main/main.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 
 
@@ -19,7 +20,8 @@ import { MainComponent } from './main/main.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    MainComponent
+    MainComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
