@@ -3,7 +3,7 @@
 }
 
 :host::ng-deep .p-menubar {
-  border:none;
+  border: none;
   border-radius: 0;
   height: 95px;
   background-color: #B91616;
@@ -11,6 +11,7 @@
 
 :host::ng-deep .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text {
   color: #fff;
+
   .p-menubar .p-menubar-root-list > .p-menuitem:hover {
     background-color: #fff;
     border-radius: 5px;
@@ -21,15 +22,12 @@
 .header-logo {
   text-decoration: none;
   color: #fff;
-  font-family: "KyivType Sans",sans-serif;
+  font-family: "KyivType Sans", sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 24px;
   line-height: 29px;
 }
-
-
-
 
 
 //.nav-header {

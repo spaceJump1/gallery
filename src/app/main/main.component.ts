@@ -22,8 +22,6 @@ export class MainComponent {
   currentLanguageIndex = 0;
   currentLanguage = this.languages[this.currentLanguageIndex];
 
-
-
   constructor(
     private sanitizer: DomSanitizer
   ) {}

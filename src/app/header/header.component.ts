@@ -3,7 +3,6 @@ import {RouterModule} from "@angular/router";
 import {MenuItem} from "primeng/api";
 import { ElementRef, AfterViewInit } from '@angular/core';
 
-
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
