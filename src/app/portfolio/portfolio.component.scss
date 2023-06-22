@@ -4,32 +4,27 @@
   align-content: center;
 }
 
-.portfolio-header-container {
+.p-heading {
   margin-top: 20px;
 }
 
-.portfolio-heading {
-  position: relative;
-  margin-left: 200px;
+.p-header {
+  color: #fff;
+  font-size: 1.5rem;
+  font-family: Geometria, sans-serif;
+  font-weight: 500;
+  margin-right: 50px;
 }
 
-.portfolio-header {
-  margin-left: 18px;
-}
-
-.portfolio-header::after {
-  content: "";
-  position: absolute;
-  top: 45%;
-  left: 210px;
-  transform: translateY(-50%);
+.p-line {
+  width: 60%;
   height: 1px;
   background-color: white;
-  width: 385%;
 }
 
 .portfolio-row {
   display: flex;
+  margin-top: 20px;
 }
 
 .portfolio-col-1 {
@@ -39,7 +34,6 @@
 
 .portfolio-col-2 {
   flex: 1;
-  margin-top: 30px;
 }
 
 .portfolio-item {
@@ -47,7 +41,7 @@
   background-color: #fff;
   width: 670px;
   height: 395px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   position: relative;
 }
 

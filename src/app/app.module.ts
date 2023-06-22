@@ -14,6 +14,7 @@ import { MainComponent } from './main/main.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ImageModule} from "primeng/image";
+import { BottomInfoComponent } from './bottom-info/bottom-info.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import {ImageModule} from "primeng/image";
     HeaderComponent,
     FooterComponent,
     MainComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    BottomInfoComponent
   ],
   imports: [
     BrowserModule,

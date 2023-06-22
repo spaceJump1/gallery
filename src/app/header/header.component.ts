@@ -21,12 +21,8 @@ export class HeaderComponent {
         routerLink: '/'
       },
       {
-        label: 'Галерея',
+        label: 'Коллекция',
         routerLink: '/gallery'
-      },
-      {
-        label: 'О нас',
-        routerLink: '/about'
       },
       {
         label: 'Контакты',
