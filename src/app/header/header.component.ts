@@ -21,8 +21,8 @@ export class HeaderComponent {
         routerLink: '/'
       },
       {
-        label: 'Коллекция',
-        routerLink: '/gallery'
+        label: 'Магазин',
+        routerLink: '/store'
       },
       {
         label: 'Контакты',
@@ -32,12 +32,9 @@ export class HeaderComponent {
   }
 
   ngAfterViewInit() {
-    // Получите доступ к элементам items и примените стили Bootstrap
     const itemsElements = this.elementRef.nativeElement.querySelectorAll('.p-menubar-root-list');
     itemsElements.forEach((element: HTMLElement) => {
-      // Примените стили Bootstrap
-      element.classList.add('ms-5'); // Замените 'bootstrap-class' на нужный вам класс
-      // Bootstrap
+      element.classList.add('ms-5');
     });
   }
 }

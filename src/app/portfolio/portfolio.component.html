@@ -2,18 +2,18 @@
   <h3 class="p-header">Наша выставка</h3>
   <div class="p-line"></div>
 </div>
-
 <div class="container">
   <div class="portfolio-row">
     <div class="portfolio-col-1 portfolio-col">
-      <div class="portfolio-item" *ngFor="let item of portfolioItems; let i = index" [hidden]="i >= visibleItemCount" (mouseenter)="item.isHovered = true" (mouseleave)="item.isHovered = false">
+      <div class="portfolio-item" *ngFor="let item of portfolioItems; let i = index" [hidden]="i >= visibleItemCount"
+           (mouseenter)="item.isHovered = true" (mouseleave)="item.isHovered = false">
         <img [src]="getSafeImgUrl(item.imgPath)" alt="{{ item.caption }}">
         <div class="caption" *ngIf="item.isHovered">{{ item.caption }}</div>
       </div>
     </div>
-
     <div class="portfolio-col-2 portfolio-col">
-      <div class="portfolio-item" *ngFor="let item of portfolioItemsTwo; let i = index" [hidden]="i >= visibleItemCount" (mouseenter)="item.isHovered = true" (mouseleave)="item.isHovered = false">
+      <div class="portfolio-item" *ngFor="let item of portfolioItemsTwo; let i = index" [hidden]="i >= visibleItemCount"
+           (mouseenter)="item.isHovered = true" (mouseleave)="item.isHovered = false">
         <img [src]="getSafeImgUrl(item.imgPath)" alt="{{ item.caption }}">
         <div class="caption" *ngIf="item.isHovered">{{ item.caption }}</div>
       </div>
@@ -22,5 +22,7 @@
 </div>
 
 <div class="container d-flex justify-content-center align-items-center">
-  <button class="collapse-button btn btn-outline-dark" (click)="toggleExpansion()">{{ isExpanded ? 'Свернуть' : 'Развернуть' }}</button>
+  <button class="collapse-button btn btn-outline-dark"
+          (click)="toggleExpansion()">{{ isExpanded ? 'Свернуть' : 'Развернуть' }}</button>
 </div>
+

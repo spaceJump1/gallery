@@ -1,10 +1,5 @@
-.page-footer {
+.footer-container {
   background-color: #B91616;
-  height: 125px;
-}
-
-.footer-logo-heading {
-  margin-left: 17.5px;
 }
 
 .footer-logo-header {
@@ -15,6 +10,10 @@
   font-style: normal;
   line-height: 30px;
   font-size: 24px;
+}
+
+.row {
+  margin: 0;
 }
 
 .social-header {
@@ -38,9 +37,20 @@
 }
 
 .contact-items {
+  text-decoration: none;
   display: inline-block;
   font-size: 16px;
   color: #fff;
+  font-family: 'KyivType Sans', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.contact-items:hover {
+  display: inline-block;
+  font-size: 16px;
+  color: #000;
   font-family: 'KyivType Sans', sans-serif;
   font-style: normal;
   font-weight: 500;

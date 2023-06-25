@@ -1,0 +1,26 @@
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+
+import {StoreComponent} from "./store/store.component";
+import {ContactsComponent} from "./contacts/contacts.component";
+
+import {MainComponent} from "./main/main.component";
+import {PortfolioComponent} from "./portfolio/portfolio.component";
+
+// Определние маршрута
+const routes: Routes = [
+  {
+    path: '', component: MainComponent, children: [
+      {path: '', component: PortfolioComponent},
+    ]
+  },
+  {path: 'store', component: StoreComponent},
+  {path: 'contacts', component: ContactsComponent},
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {
+}
