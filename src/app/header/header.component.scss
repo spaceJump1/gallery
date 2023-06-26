@@ -29,68 +29,15 @@
   line-height: 29px;
 }
 
+.login-item {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.8rem;
+  transition: font-size 0.2s;
+}
 
-//.nav-header {
-//  background-color: #B91616;
-//  color: #fff;
-//  height: 95px;
-//}
-//
-//.header-logo{
-//  color: #fff;
-//  text-decoration: none;
-//  font-family: "KyivType Sans",sans-serif;
-//  font-weight: 900;
-//  font-style: normal;
-//  line-height: 30px;
-//  font-size: 24px;
-//}
-//
-//.navbar {
-//  padding: 0;
-//}
-//
-//.navbar-nav .nav-link.active {
-//  display: inline-block;
-//  font-size: 16px;
-//  color: #fff;
-//  font-family: 'KyivType Sans', sans-serif;
-//  font-style: normal;
-//  font-weight: 500;
-//  line-height: 24px;
-//}
-//
-//.navbar-nav .nav-link.active:hover {
-//  background: #fff;
-//  color: #000;
-//  border-radius: 5px;
-//}
-//
-//.nav-items {
-//  list-style: none;
-//  display: flex;
-//}
-//
-//.nav-item {
-//  text-decoration: none;
-//  color: #fff;
-//  text-align: center;
-//}
-//
-//.nav-item:hover {
-//  background-color: #fff;
-//  height: 30px;
-//  width: 65px;
-//  color: #000;
-//  text-align: center;
-//}
-//
-//.nav-link {
-//
-//}
-//
-//
-//
-//
-//
-//
+.login-item:hover {
+  text-decoration: none;
+  color: #000;
+  font-size: 2rem;
+}
