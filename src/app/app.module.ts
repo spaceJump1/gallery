@@ -18,6 +18,7 @@ import {ImageModule} from "primeng/image";
 import {BottomInfoComponent} from './main-page/bottom-info/bottom-info.component';
 import {StoreComponent} from './store/store.component';
 import {ContactsComponent} from './contacts/contacts.component';
+import { AuthComponent } from './auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {ContactsComponent} from './contacts/contacts.component';
     PortfolioComponent,
     BottomInfoComponent,
     StoreComponent,
-    ContactsComponent
+    ContactsComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
