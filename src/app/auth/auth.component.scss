@@ -1,0 +1,15 @@
+:host::ng-deep .p-tabview-nav {
+  background: #000;
+}
+
+:host::ng-deep .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+  background: #fff;
+  color: #878787;
+  width: 200px;
+}
+
+:host::ng-deep .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+  background: #878787;
+  color: #FFFFFF;
+}
+
