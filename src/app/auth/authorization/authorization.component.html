@@ -1,1 +1,10 @@
-<p>authorization works!</p>
+<div class="mb-3">
+  <span class="auth-log-name">{{loginText}}</span><input type="text" pInputText [(ngModel)]="login" />
+</div>
+<div class="mb-3">
+  <span class="auth-psw-name">{{passwordText}}</span><input type="text" pInputText [(ngModel)]="password" />
+</div>
+
+<div>
+  <p-checkbox name="groupname" [binary]="true" [(ngModel)]="selectedValue"></p-checkbox>
+</div>

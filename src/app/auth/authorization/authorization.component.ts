@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-authorization',
@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./authorization.component.scss']
 })
 export class AuthorizationComponent {
+  loginText: string = 'Логин';
+  passwordText: string = 'Пароль';
+
+  login: string;
+  password: string;
+
+  selectedValue: boolean;
+
+  constructor() {
+    this.password = '';
+    this.login = '';
+    this.selectedValue = false;
+  }
 
 }

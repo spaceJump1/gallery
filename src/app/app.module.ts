@@ -18,7 +18,8 @@ import {ImageModule} from "primeng/image";
 import {BottomInfoComponent} from './main-page/bottom-info/bottom-info.component';
 import {StoreComponent} from './store/store.component';
 import {ContactsComponent} from './contacts/contacts.component';
-import { AuthComponent } from './auth/auth.component';
+import {AuthModule} from "./auth/auth.module";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -26,11 +27,10 @@ import { AuthComponent } from './auth/auth.component';
     HeaderComponent,
     FooterComponent,
     MainComponent,
-    PortfolioComponent,
     BottomInfoComponent,
     StoreComponent,
     ContactsComponent,
-    AuthComponent
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +41,9 @@ import { AuthComponent } from './auth/auth.component';
     AvatarModule,
     BrowserAnimationsModule,
     ImageModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AuthModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
