@@ -4,8 +4,8 @@ import {RouterModule, Routes} from '@angular/router';
 import {StoreComponent} from "./store/store.component";
 import {ContactsComponent} from "./contacts/contacts.component";
 
-import {MainComponent} from "./main/main.component";
-import {PortfolioComponent} from "./portfolio/portfolio.component";
+import {MainComponent} from "./main-page/main/main.component";
+import {PortfolioComponent} from "./main-page/portfolio/portfolio.component";
 
 // Определние маршрута
 const routes: Routes = [

@@ -11,11 +11,11 @@ import {MenubarModule} from 'primeng/menubar';
 import {InputTextModule} from "primeng/inputtext";
 import {ScrollTopModule} from 'primeng/scrolltop';
 import {AvatarModule} from 'primeng/avatar';
-import {MainComponent} from './main/main.component';
-import {PortfolioComponent} from './portfolio/portfolio.component';
+import {MainComponent} from './main-page/main/main.component';
+import {PortfolioComponent} from './main-page/portfolio/portfolio.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ImageModule} from "primeng/image";
-import {BottomInfoComponent} from './bottom-info/bottom-info.component';
+import {BottomInfoComponent} from './main-page/bottom-info/bottom-info.component';
 import {StoreComponent} from './store/store.component';
 import {ContactsComponent} from './contacts/contacts.component';
 
