@@ -22,11 +22,11 @@ export class HeaderComponent {
       },
       {
         label: 'Магазин',
-        routerLink: '/store'
+        routerLink: 'store'
       },
       {
         label: 'Контакты',
-        routerLink: '/contacts'
+        routerLink: 'contacts'
       }
     ];
   }

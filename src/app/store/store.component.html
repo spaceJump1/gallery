@@ -1,5 +1,57 @@
 <div class="container">
-  <div class="content">
+  <div class="row">
+    <div class="col-md-4 mb-5" *ngFor="let product of products">
+      <p-card class="card-items" header="{{product.name}}">
+        <ng-template pTemplate="header">
+          <img [src]="product.imagePath" class="img-items" alt="Product Image">
+          <div class="container d-flex align-items-end justify-content-end">
+            <div class="buy-btn header-info-items">
+              <p-button (click)="showDialog(product)" styleClass="p-button-rounded p-button-secondary p-button-text"><i class="fa-solid fa-circle-info" style="color: #ffffff;"></i></p-button>
+
+              <p-dialog header="{{product.name}}" [visible]="product.visible" [modal]="true" [style]="{ width: '50vw' }"
+                        [draggable]="false" [resizable]="false" class="dialog-header">
+
+                <div class="container">
+                  <img [src]="product.imagePath" alt="Product Image" class="mb-2">
+                  <p><span class="info-header">Цена:</span> {{product.price}} {{product.currency}}</p>
+                  <p><span class="info-header">Размер картины:</span> {{product.size}}</p>
+                  <p><span class="info-header">Описание картины:</span> {{product.description}}</p>
+                </div>
+
+                <p-footer class="header-btn">
+                  <p-button (click)="hideDialog(product)" icon="pi pi-times"
+                            styleClass="p-button-rounded p-button-danger p-button-text cross-btn"></p-button>
+                </p-footer>
+
+              </p-dialog>
+
+            </div>
+          </div>
+        </ng-template>
+
+
+        <p><span>Цена:</span> {{product.price}} {{product.currency}}</p>
+        <p>{{ product.description | truncate: 150}}</p>
+
+
+
+        <ng-template pTemplate="footer">
+          <div class="container d-flex align-items-end justify-content-end">
+            <div class="buy-btn">
+<!--              <p-button (click)="showDialog(product)" styleClass="p-button-success" icon="pi pi-wallet"-->
+<!--                        label="Заказать"></p-button>-->
+<!--              <p-dialog header="{{product.name}}" [visible]="product.visible" [modal]="true" [style]="{ width: '50vw' }"-->
+<!--                        [draggable]="false" [resizable]="false">-->
+<!--                <div class="container"></div>-->
+<!--                <p-footer>-->
+<!--                  <p-button label="Закрыть" (click)="hideDialog(product)" styleClass="p-button-text"></p-button>-->
+<!--                </p-footer>-->
+<!--              </p-dialog>-->
+            </div>
+          </div>
+        </ng-template>
+
+      </p-card>
+    </div>
   </div>
 </div>
-<p>store works!</p>

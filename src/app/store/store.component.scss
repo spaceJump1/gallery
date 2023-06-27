@@ -1,0 +1,63 @@
+.card-items {
+  width: 360px;
+  height: 590px;
+}
+
+.img-items {
+  height: 245px;
+  border-radius: 5px 5px 0 0;
+}
+
+:host::ng-deep .p-card .p-card-content {
+  padding: 5px;
+}
+
+.modal-img-items {
+  width: 100%;
+}
+
+.buy-btn {
+  margin-left: 17%;
+}
+
+.card-items {
+  position: relative;
+}
+
+.header-info-items {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.info-btn {
+  color: #fff;
+}
+
+.info-header {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
+}
+
+.info-image {
+  margin-left: 12%;
+}
+
+:host::ng-deep .p-dialog .p-dialog-header .p-dialog-header-icon:last-child {
+  display: none;
+}
+
+.dialog-header {
+  position: relative;
+}
+
+.header-btn {
+  position: absolute;
+  top: 2px;
+  right: 0;
+}
+
+:host::ng-deep .p-button.p-button-danger.p-button-text, .p-buttonset.p-button-danger > .p-button.p-button-text, .p-splitbutton.p-button-danger > .p-button.p-button-text {
+  width: 50px;
+}
