@@ -5,7 +5,8 @@ import { CardModule } from 'primeng/card';
 import {ButtonModule} from "primeng/button";
 import {TruncatePipe} from 'src/pipes/truncate.pipe'
 import {DialogModule} from "primeng/dialog";
-
+import { InputTextModule } from 'primeng/inputtext';
+import { ReactiveFormsModule, FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [StoreComponent, TruncatePipe],
@@ -13,7 +14,10 @@ import {DialogModule} from "primeng/dialog";
     CommonModule,
     CardModule,
     ButtonModule,
-    DialogModule
+    DialogModule,
+    InputTextModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class StoreModule { }

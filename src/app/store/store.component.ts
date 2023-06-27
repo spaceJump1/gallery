@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {IProduct} from "../../model/product";
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-store',
@@ -9,8 +10,10 @@ import {IProduct} from "../../model/product";
 })
 export class StoreComponent implements OnInit {
   products: IProduct[] = [];
+  formData: any = {};
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+  }
 
   ngOnInit(): void {
     this.loadProducts();
@@ -33,5 +36,17 @@ export class StoreComponent implements OnInit {
 
   hideDialog(product: IProduct): void {
     product.visible = false;
+  }
+
+  showNewDialog(product: IProduct): void {
+    product.dialogVisible = true;
+  }
+
+  hideNewDialog(product: IProduct): void {
+    product.dialogVisible = false;
+  }
+
+  submitForm(): void {
+    console.log(this.formData);
   }
 }
