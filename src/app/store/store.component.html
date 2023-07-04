@@ -27,16 +27,14 @@
         <p><span>Цена:</span> {{product.price}} {{product.currency}}</p>
         <p>{{ product.description | truncate: 150}}</p>
 
-
         <ng-template pTemplate="footer">
           <div class="container d-flex align-items-end justify-content-end">
             <div class="buy-btn">
-              <p-button (click)="showNewDialog(product)" styleClass="p-button-success" icon="pi pi-wallet"
-                        label="Заказать"></p-button>
+              <p-button (click)="showNewDialog(product)" styleClass="p-button-success" icon="pi pi-cart-plus"
+                        label="В корзину"></p-button>
               <p-dialog header="{{product.name}}" [visible]="product.dialogVisible" [modal]="true"
                         [style]="{ width: '50vw' }"
                         [draggable]="false" [resizable]="false">
-
 
                 <div class="container">
                   <form (ngSubmit)="submitForm()">
@@ -55,7 +53,6 @@
                     <button type="submit">Отправить</button>
                   </form>
                 </div>
-
 
                 <p-footer>
                   <p-button label="Закрыть" (click)="hideNewDialog(product)" styleClass="p-button-text"></p-button>

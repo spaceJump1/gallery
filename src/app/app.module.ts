@@ -21,6 +21,8 @@ import {AuthModule} from "./auth/auth.module";
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {StoreModule} from "./store/store.module";
+import { CartComponent } from './cart/cart.component';
+import {ButtonModule} from "primeng/button";
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import {StoreModule} from "./store/store.module";
     MainComponent,
     BottomInfoComponent,
     ContactsComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +48,8 @@ import {StoreModule} from "./store/store.module";
     AuthModule,
     FormsModule,
     HttpClientModule,
-    StoreModule
+    StoreModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

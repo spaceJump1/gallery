@@ -59,5 +59,7 @@
 }
 
 :host::ng-deep .p-button.p-button-danger.p-button-text, .p-buttonset.p-button-danger > .p-button.p-button-text, .p-splitbutton.p-button-danger > .p-button.p-button-text {
-  width: 50px;
+  width: 40px;
+  height: 40px;
+  margin: 10px 10px 0;
 }

@@ -41,3 +41,15 @@
   color: #000;
   font-size: 2rem;
 }
+
+:host::ng-deep .p-button {
+  background: none;
+  border: none;
+}
+
+:host::ng-deep .p-button:hover {
+  color: #000;
+  background: #495057;
+}
+
+

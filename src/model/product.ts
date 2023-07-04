@@ -1,4 +1,5 @@
 export interface IProduct {
+  dialogVisible: boolean;
   imagePath: string;
   name: string;
   description: string;
