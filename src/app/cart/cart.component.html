@@ -16,4 +16,8 @@
   <p>Корзина пуста</p>
 </div>
 
+<div>
+  <p><span class="item-header">Общая стоимость: </span>{{getTotalCartPrice()}}</p>
+</div>
+
 <app-feedback (feedbackSubmitted)="handleFeedback($event)"></app-feedback>

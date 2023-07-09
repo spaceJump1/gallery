@@ -30,6 +30,16 @@ export class CartService {
     return this.cartItems;
   }
 
+  getTotalPrice(): number {
+    let totalPrice = 0;
+    const cartItems = this.getCartItems();
+
+    for (const item of cartItems) {
+      totalPrice += item.price;
+    }
+    return totalPrice;
+  }
+
   updateCartItems(): void {
     this.cartItems = [...this.cartItems];
     this.cartItemCountSubj.next(this.cartItems.length);

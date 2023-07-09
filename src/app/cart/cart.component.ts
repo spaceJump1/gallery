@@ -2,7 +2,7 @@ import {Component, OnInit, OnDestroy} from '@angular/core';
 import {CartService} from "../../services/cart/cart.service";
 import {IProduct} from "../../model/product";
 import {HttpClient} from "@angular/common/http";
-import {Observable, Subscription} from "rxjs";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-cart',
@@ -31,7 +31,9 @@ export class CartComponent implements OnInit, OnDestroy {
     this.cartItemCountSub.unsubscribe();
   }
 
-
+  getTotalCartPrice(): number {
+    return this.cartService.getTotalPrice();
+  }
 
   handleFeedback(feedbackData: any): void {
 
