@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+
+
+
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
-  ],
-  providers: []
+    CommonModule,
+  ]
 })
-export class HeaderModule { }
+export class ContactsModule { }

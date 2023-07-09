@@ -1,6 +1,7 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {IProduct} from "../../model/product";
-import {BehaviorSubject, Observable, Subject} from "rxjs";
+import {BehaviorSubject, Observable} from "rxjs";
+import { CartStateService } from "./cartstate/cartstate.service";
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,8 @@ export class CartService {
   private cartItemCountSubj: BehaviorSubject<number> = new BehaviorSubject<number>(0);
   cartItemCount$: Observable<number> = this.cartItemCountSubj.asObservable();
 
-  constructor() { }
+  constructor(private cartState: CartStateService) {
+  }
 
   addToCart(product: IProduct): void {
     if (!this.isProductInCart(product)) {
@@ -28,15 +30,15 @@ export class CartService {
     return this.cartItems;
   }
 
-  removeFromCart(item: any): void {
-    const index = this.cartItems.indexOf(item);
-    if (index !== -1) {
-      this.cartItems.splice(index, 1);
-    }
+  updateCartItems(): void {
+    this.cartItems = [...this.cartItems];
+    this.cartItemCountSubj.next(this.cartItems.length);
   }
 
-  private updateCartItemCount(): void {
-    const cartItemCount = this.cartItems.length;
-    this.cartItemCountSubj.next(cartItemCount);
+  clearCart(): void {
+    this.cartItems = [];
+    this.cartItemCountSubj.next(0);
   }
 }
+
+

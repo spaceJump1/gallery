@@ -1,0 +1,62 @@
+* {
+  color: #fff;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Добавлено свойство justify-content */
+  background-color: #495057;
+  border-radius: 6px;
+}
+
+.item-photo {
+  width: 150px;
+  height: 80px;
+}
+
+.item-details {
+  flex: 1;
+}
+
+.item-name {
+  text-align: start;
+}
+
+.item-btn {
+  margin-left: 5px; /* Изменено свойство margin-left на margin-right */
+}
+
+.item-header {
+  font-weight: bold;
+}
+
+
+//* {
+//  color: #fff;
+//}
+//
+//.cart-item {
+//  display: flex;
+//  align-items: center;
+//  background-color: #495057;
+//  border-radius: 6px;
+//}
+//
+//.item-photo {
+//  width: 150px;
+//  height: 75px;
+//}
+//
+//.item-name {
+//  text-align: center;
+//}
+//
+//.item-btn {
+//  flex:1;
+//  align-items: end;
+//}
+//
+//.item-header {
+//  font-weight: bold;
+//}

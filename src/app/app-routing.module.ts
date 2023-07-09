@@ -6,7 +6,6 @@ import {ContactsComponent} from "./contacts/contacts.component";
 
 import {MainComponent} from "./main-page/main/main.component";
 import {PortfolioComponent} from "./main-page/portfolio/portfolio.component";
-import {AuthComponent} from "./auth/auth.component";
 import {CartComponent} from "./cart/cart.component";
 
 // Определние маршрута
@@ -18,7 +17,6 @@ const routes: Routes = [
   },
   {path: 'store', component: StoreComponent},
   {path: 'contacts', component: ContactsComponent},
-  {path: 'auth', component: AuthComponent},
   {path: 'cart', component: CartComponent}
 ];
 

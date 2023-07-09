@@ -1,1 +1,51 @@
-<p>contacts works!</p>
+<div class="container d-flex">
+  <div class="map flex-1">
+    <ya-map [center]="[59.936792, 30.312652]" [zoom]="12">
+      <ya-placemark [geometry]="[59.936792, 30.312652]"></ya-placemark>
+    </ya-map>
+  </div>
+
+  <div class="contacts ms-5 flex-1">
+    <div>
+      <h3>Адрес галереи</h3>
+      <p>Россия, Санкт-Петербург, Невский проспект, 3</p>
+    </div>
+    <div>
+      <h3>График работы</h3>
+      <p>Пн: Выходной</p>
+      <p>Вт – Вс: 12.00 – 19.00</p>
+    </div>
+    <div>
+      <h3>Контакты</h3>
+      <p>+7 (999) 999-99-99</p>
+      <p>admin@hvzegallery.com</p>
+      <p>store@hvzegallery.com</p>
+    </div>
+    <div>
+      <h3 class="social-header">Наши соц. сети</h3>
+      <a href="#" target="_blank">
+        <p-avatar shape="circle" class="me-4 ms-1">
+          <i class="fa-brands fa-vk"></i>
+        </p-avatar>
+      </a>
+
+      <a href="#" target="_blank">
+        <p-avatar shape="circle" class="me-4">
+          <i class="fa-brands fa-telegram"></i>
+        </p-avatar>
+      </a>
+
+      <a href="#" target="_blank">
+        <p-avatar shape="circle" class="me-3">
+          <i class="fa-brands fa-odnoklassniki"></i>
+        </p-avatar>
+      </a>
+
+      <a href="#" target="_blank">
+        <p-avatar shape="circle" class="ms-1">
+          <i class="fa-brands fa-instagram"></i>
+        </p-avatar>
+      </a>
+    </div>
+  </div>
+</div>

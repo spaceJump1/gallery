@@ -7,6 +7,8 @@ import {TruncatePipe} from 'src/pipes/truncate.pipe'
 import {DialogModule} from "primeng/dialog";
 import { InputTextModule } from 'primeng/inputtext';
 import { ReactiveFormsModule, FormsModule} from "@angular/forms";
+import {MessageService} from "primeng/api";
+import {ToastModule} from "primeng/toast";
 
 @NgModule({
   declarations: [StoreComponent, TruncatePipe],
@@ -17,7 +19,9 @@ import { ReactiveFormsModule, FormsModule} from "@angular/forms";
     DialogModule,
     InputTextModule,
     ReactiveFormsModule,
-    FormsModule
-  ]
+    FormsModule,
+    ToastModule,
+  ],
+  providers: [MessageService]
 })
 export class StoreModule { }

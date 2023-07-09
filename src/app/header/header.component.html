@@ -3,7 +3,10 @@
     <h2 class="ms-5"><a routerLink="/" class="header-logo">HvzeArt<i class="fa-solid fa-brush ms-1"></i></a></h2>
   </ng-template>
 
-  <ng-template pTemplate="end">
-    <p-button routerLink="/cart" class="mr-5"><i class="fa-solid fa-cart-shopping"></i></p-button>
+  <ng-template pTemplate="end" class="position-relative">
+    <p-badge class="position-absolute z-1 ms-1 mt-3" [value]="cartItemCount"></p-badge>
+    <p-button routerLink="/cart"
+              class="mr-5"><i class="fa-solid fa-cart-shopping"></i>
+    </p-button>
   </ng-template>
 </p-menubar>

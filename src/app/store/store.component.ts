@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {IProduct} from "../../model/product";
-import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {CartService} from "../../services/cart/cart.service";
+import {MessageService} from "primeng/api";
 
 @Component({
   selector: 'app-store',
@@ -10,9 +11,10 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 })
 export class StoreComponent implements OnInit {
   products: IProduct[] = [];
-  formData: any = {};
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,
+              private cartService: CartService,
+              private messageService: MessageService) {
   }
 
   ngOnInit(): void {
@@ -38,15 +40,13 @@ export class StoreComponent implements OnInit {
     product.visible = false;
   }
 
-  showNewDialog(product: IProduct): void {
-    product.dialogVisible = true;
-  }
-
-  hideNewDialog(product: IProduct): void {
-    product.dialogVisible = false;
-  }
-
-  submitForm(): void {
-    console.log(this.formData);
+  addToCart(product: IProduct): void {
+    if (!this.cartService.isProductInCart(product)) {
+      this.cartService.addToCart(product);
+      this.messageService.add({ severity: 'success', detail: 'Товар добавлен в корзину' });
+    } else {
+      this.messageService.add({ severity: 'error', detail: 'Картины продаются в единственном' +
+          ' экземпляре' });
+    }
   }
 }
