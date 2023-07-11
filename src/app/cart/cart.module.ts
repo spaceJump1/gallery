@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {CartComponent} from "./cart.component";
-import {FeedbackComponent} from "../feedback/feedback.component";
+import {FeedbackComponent} from "./feedback/feedback.component";
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import {InputTextModule} from "primeng/inputtext";
 import {ButtonModule} from "primeng/button";

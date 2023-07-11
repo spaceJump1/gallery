@@ -1,6 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {CartStateService} from "../../services/cart/cartstate/cartstate.service";
-import { CartService} from "../../services/cart/cart.service";
+import {CartStateService} from "../../../services/cart/cartstate/cartstate.service";
+import { CartService} from "../../../services/cart/cart.service";
 import {MessageService} from "primeng/api";
 
 @Component({
@@ -19,7 +19,6 @@ export class FeedbackComponent implements OnInit {
   isCartEmpty: boolean = true;
 
   public customPatterns = { '0': { pattern: new RegExp('\[0-9\]')} };
-
 
   @Output() feedbackSubmitted = new EventEmitter<any>();
 

@@ -38,7 +38,7 @@ import {AngularYandexMapsModule} from "angular8-yandex-maps";
     ],
     imports: [
         BrowserModule,
-        RouterModule.forRoot([]), // Настройка маршрутизации с пустым массивом роутов
+        RouterModule.forRoot([]),
         MenubarModule,
         InputTextModule,
         ScrollTopModule,

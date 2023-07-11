@@ -8,7 +8,7 @@ import {Image} from "primeng/image";
   providedIn: 'root'
 })
 export class ImagesService {
-  private readonly apiUrl = 'http://localhost:3000/images';
+  private readonly apiUrl = 'http://localhost:3000/store';
 
   constructor(private readonly http: HttpClient) { }
 

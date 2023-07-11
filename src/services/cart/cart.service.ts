@@ -41,7 +41,7 @@ export class CartService {
   }
 
   updateCartItems(): void {
-    this.cartItems = [...this.cartItems];
+    // this.cartItems = [...this.cartItems];
     this.cartItemCountSubj.next(this.cartItems.length);
   }
 

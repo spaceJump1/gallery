@@ -61,7 +61,7 @@ export class CartComponent implements OnInit, OnDestroy {
   }
 
   removeItem(item: IProduct): void {
-    const index = this.cartItems.indexOf(item);
+    const index = this.cartItems.findIndex((cartItems) => cartItems._id === item._id);
     if (index !== -1) {
       this.cartItems.splice(index, 1); // Удаление элемента из массива cartItems
       this.cartService.updateCartItems(); // Обновление корзины в сервисе
@@ -70,6 +70,7 @@ export class CartComponent implements OnInit, OnDestroy {
 
   clearCart(): void {
     this.cartItems =[];
+    this.cartItemCount = 0;
     this.cartService.clearCart();
   }
 }
