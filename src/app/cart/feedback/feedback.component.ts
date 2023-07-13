@@ -2,6 +2,7 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {CartStateService} from "../../../services/cart/cartstate/cartstate.service";
 import { CartService} from "../../../services/cart/cart.service";
 import {MessageService} from "primeng/api";
+import {AbstractControl, FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-feedback',
@@ -9,11 +10,8 @@ import {MessageService} from "primeng/api";
   styleUrls: ['./feedback.component.scss'],
 })
 export class FeedbackComponent implements OnInit {
-  firstName: string = '';
-  lastName: string = '';
-  phoneNumber: string = '';
-  city: string = '';
-  address: string = '';
+  feedbackForm!: FormGroup;
+
   checked: boolean = false;
 
   isCartEmpty: boolean = true;
@@ -27,29 +25,33 @@ export class FeedbackComponent implements OnInit {
               private messageService: MessageService) {}
 
   ngOnInit(): void {
+    this.feedbackForm = new FormGroup({
+      fName: new FormControl('', [Validators.required, Validators.minLength(2), this.ngDigitsValidator]),
+      lName: new FormControl('', [Validators.required, Validators.minLength(2), this.ngDigitsValidator]),
+      pNumb: new FormControl('', {validators: Validators.required}),
+      delivery: new FormControl(''),
+      userCity: new FormControl(''),
+      userAddress: new FormControl('')
+    })
+
     this.cartService.cartItemCount$.subscribe(count => {
       this.isCartEmpty = count === 0;
     });
   }
 
+  // Кнопка формы
   submitFeedback() {
     if (this.isCartEmpty) {
-      console.log('Корзина пуста. Невозможно отправить заказ.');
-      return;
-    }
-
-    if (!this.isFormValid()) {
-      console.log('Заполните форму');
       return;
     }
 
     const feedbackData = {
-        firstName: this.firstName,
-        lastName: this.lastName,
-        phoneNumber: this.phoneNumber,
+        firstName: this.feedbackForm.get('fName')?.value,
+        lastName: this.feedbackForm.get('lName')?.value,
+        phoneNumber: this.feedbackForm.get('pNumb')?.value,
         delivery: this.checked,
-        city: this.city,
-        address: this.address
+        city: this.feedbackForm.get('userCity')?.value,
+        address: this.feedbackForm.get('userAddress')?.value
     };
 
     this.feedbackSubmitted.emit(feedbackData);
@@ -58,27 +60,39 @@ export class FeedbackComponent implements OnInit {
         ' менеджеру, ожидайте звонок'})
   }
 
+  // Работа switch
   onDeliveryChange(event: any) {
     this.checked = event; // Присваиваем новое значение переменной delivery
-    console.log('Delivery changed:', this.checked);
   }
 
+  // Валидатор для проверки отсутсвия цифр в значении поля Digits(цифры)
+  ngDigitsValidator(control: AbstractControl) {
+    const value = control.value;
+    const hasDigits = /\d/.test(value); // Проверка наличия цифр в значении
+
+    if (hasDigits) {
+      return {hasDigits: true};
+    } else {
+      return null
+    }
+  }
+
+  // Проверка формы на валидные данные
   isFormValid(): boolean {
-    if (!this.firstName || !this.lastName) {
+    if (!this.feedbackForm) {
       return false;
     }
 
-    if (this.isNumeric(this.firstName) ||
-      this.isNumeric(this.lastName) ||
-      (this.checked && (this.isNumeric(this.address) ||
-        this.isNumeric(this.city)))) {
+    const fName = this.feedbackForm.get('fName');
+    const lName = this.feedbackForm.get('lName');
+    const pNumb = this.feedbackForm.get('pNumb');
+
+    if (
+      fName && fName.valid && lName && lName.valid && pNumb && pNumb.valid
+    ) {
       return false;
     }
 
     return true;
-  }
-
-  private isNumeric(value: string): boolean {
-    return /^\d+$/.test(value);
   }
 }

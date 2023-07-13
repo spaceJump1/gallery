@@ -9,6 +9,7 @@ import {FormsModule} from "@angular/forms";
 import {InputSwitchModule} from "primeng/inputswitch";
 import {NgxMaskDirective, NgxMaskPipe, provideNgxMask} from "ngx-mask";
 import {ToastModule} from "primeng/toast";
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import {ToastModule} from "primeng/toast";
     InputSwitchModule,
     NgxMaskDirective,
     NgxMaskPipe,
-    ToastModule
+    ToastModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideNgxMask()
