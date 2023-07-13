@@ -57,7 +57,7 @@ export class CartComponent implements OnInit, OnDestroy {
   }
 
   trackByFn(index: number, item: IProduct): string {
-    return item._id; // Замените _id на уникальный идентификатор вашего объекта товара
+    return item._id;
   }
 
   removeItem(item: IProduct): void {

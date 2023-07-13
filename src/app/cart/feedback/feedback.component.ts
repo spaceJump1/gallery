@@ -68,7 +68,10 @@ export class FeedbackComponent implements OnInit {
       return false;
     }
 
-    if (this.isNumeric(this.firstName) || this.isNumeric(this.lastName) || (this.checked && (this.isNumeric(this.address) || this.isNumeric(this.city)))) {
+    if (this.isNumeric(this.firstName) ||
+      this.isNumeric(this.lastName) ||
+      (this.checked && (this.isNumeric(this.address) ||
+        this.isNumeric(this.city)))) {
       return false;
     }
 

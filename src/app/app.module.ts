@@ -1,11 +1,9 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from "./app-routing.module";
-
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './header/header.component';
 import {FooterComponent} from './footer/footer.component';
-
 import {RouterModule} from "@angular/router";
 import {MenubarModule} from 'primeng/menubar';
 import {InputTextModule} from "primeng/inputtext";
@@ -22,7 +20,6 @@ import {HttpClientModule} from "@angular/common/http";
 import {StoreModule} from "./store/store.module";
 import {ButtonModule} from "primeng/button";
 import {BadgeModule} from "primeng/badge";
-import {CartService} from "../services/cart/cart.service";
 import {CartModule} from "./cart/cart.module";
 import {AngularYandexMapsModule} from "angular8-yandex-maps";
 
@@ -54,7 +51,7 @@ import {AngularYandexMapsModule} from "angular8-yandex-maps";
         CartModule,
       AngularYandexMapsModule
     ],
-    providers: [CartService],
+    providers: [],
     exports: [
 
     ],
