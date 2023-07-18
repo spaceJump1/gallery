@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {IProduct} from "../../model/product";
 import {CartService} from "../../services/cart/cart.service";
 import {MessageService} from "primeng/api";
+import { ImagesService } from "../../services/images/images.service";
 
 @Component({
   selector: 'app-store',
@@ -11,14 +12,19 @@ import {MessageService} from "primeng/api";
 })
 export class StoreComponent implements OnInit {
   products: IProduct[] = [];
+  imageUrl!: string;
 
   constructor(private http: HttpClient,
               private cartService: CartService,
-              private messageService: MessageService) {
+              private messageService: MessageService,
+              private imageService: ImagesService) {
   }
 
   ngOnInit(): void {
     this.loadProducts();
+
+    const imageName = 'img 1.jpg';
+    this.imageUrl = this.imageService.getImageUrl(imageName);
   }
 
   loadProducts(): void {
@@ -49,4 +55,5 @@ export class StoreComponent implements OnInit {
           ' экземпляре' });
     }
   }
+
 }

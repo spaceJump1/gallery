@@ -69,8 +69,9 @@ export class FeedbackComponent implements OnInit {
   ngDigitsValidator(control: AbstractControl) {
     const value = control.value;
     const hasDigits = /\d/.test(value); // Проверка наличия цифр в значении
+    const hasSpaces = /\s{2,}/.test(value);
 
-    if (hasDigits) {
+    if (hasDigits || hasSpaces) {
       return {hasDigits: true};
     } else {
       return null
@@ -88,11 +89,12 @@ export class FeedbackComponent implements OnInit {
     const pNumb = this.feedbackForm.get('pNumb');
 
     if (
-      fName && fName.valid && lName && lName.valid && pNumb && pNumb.valid
+      fName && fName.valid &&
+      lName && lName.valid &&
+      pNumb && pNumb.valid
     ) {
       return false;
     }
-
     return true;
   }
 }

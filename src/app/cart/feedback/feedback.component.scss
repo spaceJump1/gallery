@@ -17,11 +17,14 @@
 
 label {
   margin-bottom: 5px;
+  font-weight: bold;
 }
-
 
 .input-wrapper {
   display: flex;
   flex-direction: column;
 }
 
+.p-inputtext.ng-dirty.ng-invalid {
+  border: 2px solid #e24c4c;
+}

@@ -1,8 +1,12 @@
 <form (ngSubmit)="submitFeedback()" [formGroup]="feedbackForm">
   <div class="mb-3">
     <label for="fName">Имя:</label>
-    <input type="text" pInputText id="fName" formControlName="fName" placeholder="Имя" class="input-wrapper">
+    <input type="text" pInputText id="fName"
+           formControlName="fName"
+           placeholder="Имя"
+           class="input-wrapper">
   </div>
+
   <div class="mb-3">
     <label for="lName">Фамилия:</label>
     <input type="text" pInputText id="lName" formControlName="lName" placeholder="Фамилия" class="input-wrapper">

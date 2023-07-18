@@ -8,11 +8,12 @@ import {Image} from "primeng/image";
   providedIn: 'root'
 })
 export class ImagesService {
-  private readonly apiUrl = 'http://localhost:3000/store';
+  // private readonly apiUrl = 'http://localhost:3000/';
 
-  constructor(private readonly http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  getAllImages(): Observable<Image[]> {
-    return this.http.get<Image[]>(this.apiUrl);
+  getImageUrl(imageName: string) {
+   return `http://localhost:3000/uploads/${imageName}`;
   }
+
 }
