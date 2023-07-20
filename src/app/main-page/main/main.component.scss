@@ -52,5 +52,11 @@
   height: 280px;
 }
 
+@media screen and (max-width: 960px) {
+  .main-header {
+    font-size: 150px;
+    line-height: 199px;
+  }
+}
 
 
