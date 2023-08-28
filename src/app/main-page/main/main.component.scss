@@ -52,5 +52,45 @@
   height: 280px;
 }
 
+@media screen and (max-width: 960px) {
+  .main-header {
+    font-size: 150px;
+    line-height: 199px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .main-header {
+    font-size: 75px;
+    line-height: 70px;
+  }
+  .main-header-p {
+    font-size: 1rem;
+    line-height: 30px;
+  }
+
+  .main-img {
+    margin-top: 20px; /* Добавьте отступ сверху, если нужно */
+  }
+
+  .top-img {
+    width: 390px;
+  }
+
+  .col1 {
+    margin-right: 0;
+  }
+
+  .left-img {
+    display: none;
+  }
+
+  .main-hello {
+    position: absolute;
+    top: 25%;
+    left: 12.5%;
+    z-index: 1;
+  }
+}
 
 

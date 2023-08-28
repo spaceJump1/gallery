@@ -17,3 +17,10 @@ html, body {
   background-color: black;
 }
 
+@media screen and (max-width: 960px) {
+  .content-main {
+    width: 390px;
+    padding: 0 !important;
+    margin-top: 20px;
+  }
+}

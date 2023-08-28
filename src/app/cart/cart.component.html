@@ -1,1 +1,26 @@
-<p>cart works!</p>
+<div class="cart__header">
+  <h1 class="cart__header-text">Корзина</h1>
+</div>
+
+<p-button *ngIf="cartItems.length > 0" label="Очистить корзину" styleClass="p-button-danger" class=""
+          (click)="clearCart()"></p-button>
+
+<div class="mb-5" *ngIf="cartItems.length > 0">
+  <div class="cart-item mt-3" *ngFor="let item of cartItems; trackBy: trackByFn">
+    <img src="{{item.imagePath}}" alt="product-photo" class="item-photo">
+    <div class="item-details ms-3">
+       <p class="item-name"><span class="item-header">Название работы:</span> {{ item.name }}</p>
+      <p class="item-name"><span class="item-header">Цена:</span> {{ item.price }} {{ item.currency }}</p>
+    </div>
+    <p-button label="Удалить" styleClass="p-button-danger" class="item-btn me-2" (click)="removeItem(item)"></p-button></div>
+</div>
+
+<div class="mt-4" *ngIf="cartItems.length === 0">
+  <p class="cart-empty">Корзина пуста. Добавьте, пожалуйста, товары.</p>
+</div>
+
+<div>
+  <p><span class="item-header">Общая стоимость: </span>{{getTotalCartPrice()}} rub</p>
+</div>
+
+<app-feedback (feedbackSubmitted)="handleFeedback($event)"></app-feedback>

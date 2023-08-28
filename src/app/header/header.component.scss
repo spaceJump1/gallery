@@ -29,18 +29,18 @@
   line-height: 29px;
 }
 
-.login-item {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1.8rem;
-  transition: font-size 0.2s;
-}
-
-.login-item:hover {
-  text-decoration: none;
-  color: #000;
-  font-size: 2rem;
-}
+//.login-item {
+//  text-decoration: none;
+//  color: #fff;
+//  font-size: 1.8rem;
+//  transition: font-size 0.2s;
+//}
+//
+//.login-item:hover {
+//  text-decoration: none;
+//  color: #000;
+//  font-size: 2rem;
+//}
 
 :host::ng-deep .p-button {
   background: none;
@@ -48,8 +48,46 @@
 }
 
 :host::ng-deep .p-button:hover {
-  color: #000;
-  background: #495057;
+  color: #495057;
+  background:#fff;
+}
+
+:host::ng-deep .p-badge {
+  min-width: 1rem;
+  height: 1rem;
+  line-height: 1rem;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 960px) {
+  :host::ng-deep .p-menubar .p-menubar-button {
+    color: #fff;
+    margin-left: 1rem;
+  }
+
+  :host::ng-deep .p-menubar .p-menubar-root-list {
+    background: #B91616;
+    width: 27%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  :host::ng-deep .p-menubar .p-menubar-button {
+    color: #fff;
+    margin-left: 1rem;
+  }
+
+  :host::ng-deep .p-menubar .p-menubar-root-list {
+    background: #B91616;
+    width: 87.7%;
+  }
+
+
+  :host::ng-deep .p-menubar-start {
+    position: absolute;
+    top: 32px;
+    left: 65px;
+  }
 }
 
 

@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AuthComponent } from './auth.component';
+import { FeedbackComponent } from './feedback.component';
 
-describe('AuthComponent', () => {
-  let component: AuthComponent;
-  let fixture: ComponentFixture<AuthComponent>;
+describe('FeedbackComponent', () => {
+  let component: FeedbackComponent;
+  let fixture: ComponentFixture<FeedbackComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [AuthComponent]
+      declarations: [FeedbackComponent]
     });
-    fixture = TestBed.createComponent(AuthComponent);
+    fixture = TestBed.createComponent(FeedbackComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -7,4 +7,5 @@ export interface IProduct {
   currency: string;
   size: string;
   visible: boolean;
+  _id: string;
 }

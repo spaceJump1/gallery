@@ -1,11 +1,9 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from "./app-routing.module";
-
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './header/header.component';
 import {FooterComponent} from './footer/footer.component';
-
 import {RouterModule} from "@angular/router";
 import {MenubarModule} from 'primeng/menubar';
 import {InputTextModule} from "primeng/inputtext";
@@ -17,42 +15,49 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ImageModule} from "primeng/image";
 import {BottomInfoComponent} from './main-page/bottom-info/bottom-info.component';
 import {ContactsComponent} from './contacts/contacts.component';
-import {AuthModule} from "./auth/auth.module";
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {StoreModule} from "./store/store.module";
-import { CartComponent } from './cart/cart.component';
 import {ButtonModule} from "primeng/button";
+import {BadgeModule} from "primeng/badge";
+import {CartModule} from "./cart/cart.module";
+import {AngularYandexMapsModule} from "angular8-yandex-maps";
+import {DialogModule} from "primeng/dialog";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    MainComponent,
-    BottomInfoComponent,
-    ContactsComponent,
-    PortfolioComponent,
-    CartComponent
-  ],
-  imports: [
-    BrowserModule,
-    RouterModule.forRoot([]), // Настройка маршрутизации с пустым массивом роутов
-    MenubarModule,
-    InputTextModule,
-    ScrollTopModule,
-    AvatarModule,
-    BrowserAnimationsModule,
-    ImageModule,
-    AppRoutingModule,
-    AuthModule,
-    FormsModule,
-    HttpClientModule,
-    StoreModule,
-    ButtonModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        FooterComponent,
+        MainComponent,
+        BottomInfoComponent,
+        ContactsComponent,
+        PortfolioComponent,
+    ],
+    imports: [
+        BrowserModule,
+        RouterModule.forRoot([]),
+        MenubarModule,
+        InputTextModule,
+        ScrollTopModule,
+        AvatarModule,
+        BrowserAnimationsModule,
+        ImageModule,
+        AppRoutingModule,
+        FormsModule,
+        HttpClientModule,
+        StoreModule,
+        ButtonModule,
+        BadgeModule,
+        CartModule,
+        AngularYandexMapsModule,
+        DialogModule
+    ],
+    providers: [],
+    exports: [
+
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }
