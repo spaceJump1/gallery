@@ -28,3 +28,42 @@ label {
 .p-inputtext.ng-dirty.ng-invalid {
   border: 2px solid #e24c4c;
 }
+
+
+@media (max-width: 700px) {
+  .submit-btn {
+    margin: 0 0 40px 20px;
+  }
+
+  .form__item {
+    margin-left: 20px;
+
+    .p-inputtext {
+      width: 230px;
+    }
+
+  }
+
+  .delivery__form {
+    &-label {
+      width: 200px;
+      margin-left: 20px;
+    }
+
+    &-input {
+      margin-left: 20px;
+    }
+  }
+
+  .toggle__form {
+    &-label {
+      margin-left: 20px;
+    }
+
+    &-input {
+      margin-left: 20px;
+      width: 230px;
+    }
+
+  }
+}

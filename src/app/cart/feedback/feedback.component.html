@@ -1,40 +1,43 @@
 <form (ngSubmit)="submitFeedback()" [formGroup]="feedbackForm">
-  <div class="mb-3">
+  <div class="mb-3 form__item">
     <label for="fName">Имя:</label>
-    <input type="text" pInputText id="fName"
+    <input class="form-input" type="text" pInputText id="fName"
            formControlName="fName"
            placeholder="Имя"
            class="input-wrapper">
   </div>
 
-  <div class="mb-3">
+  <div class="mb-3 form__item">
     <label for="lName">Фамилия:</label>
-    <input type="text" pInputText id="lName" formControlName="lName" placeholder="Фамилия" class="input-wrapper">
+    <input class="form__item-input" type="text" pInputText id="lName" formControlName="lName" placeholder="Фамилия"
+           class="input-wrapper">
   </div>
-  <div class="mb-3">
+  <div class="mb-3 form__item">
     <label for="pNumb">Номер телефона:</label>
-    <input type="text" pInputText id="pNumb" formControlName="pNumb" placeholder="Номер телефона"
+    <input class="form__item-input" type="text" pInputText id="pNumb" formControlName="pNumb" placeholder="Номер телефона"
            [patterns]="customPatterns"
            prefix="+7"
            mask="(000) 000 00 00"
            placeholder="+7 (999) 999 99 99"
            class="input-wrapper">
   </div>
-    <div class="form-group mb-3">
-      <label for="switch">Нужна ли доставка?</label>
-      <p-inputSwitch id="switch" formControlName="delivery" (ngModelChange)="onDeliveryChange($event)"
+    <div class="form-group mb-3 delivery__form">
+      <label class="delivery__form-label" for="switch">Нужна ли доставка?</label>
+      <p-inputSwitch class="delivery__form-input" id="switch" formControlName="delivery"
+                     (ngModelChange)="onDeliveryChange($event)"
                      name="delivery" required></p-inputSwitch>
     </div>
-  <div class="mb-3" *ngIf="checked">
-    <label for="userCity">Город:</label>
-    <input type="text" pInputText id="userCity" formControlName="userCity" placeholder="Город" class="input-wrapper">
+  <div class="mb-3 toggle__form" *ngIf="checked">
+    <label class="toggle__form-label" for="userCity">Город:</label>
+    <input type="text" pInputText id="userCity" formControlName="userCity"
+           placeholder="Город" class="input-wrapper toggle__form-input">
   </div>
-  <div class="mb-3 form-group" *ngIf="checked">
-    <label for="userAddress">Адрес:</label>
+  <div class="mb-3 form-group toggle__form" *ngIf="checked">
+    <label class="toggle__form-label" for="userAddress">Адрес:</label>
     <input type="text" pInputText id="userAddress" formControlName="userAddress" placeholder="Адрес"
-              class="input-wrapper">
+              class="input-wrapper toggle__form-input">
   </div>
-  <button type="submit" [disabled]="isCartEmpty || isFormValid()" pButton label="Отправить"></button>
+  <button type="submit" [disabled]="isCartEmpty || isFormValid()" class="submit-btn" pButton label="Отправить"></button>
 </form>
 
 <p-toast></p-toast>

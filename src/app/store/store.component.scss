@@ -63,3 +63,9 @@
   height: 40px;
   margin: 10px 10px 0;
 }
+
+@media screen and (max-width: 960px) {
+  .header-info-items {
+    display: none;
+  }
+}

@@ -56,3 +56,32 @@
   font-weight: 500;
   line-height: 22px;
 }
+
+@media screen and (max-width: 960px) {
+  .contact-items {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .col-4 {
+    width: 210px;
+  }
+
+
+  .footer-logo-header {
+    display: none;
+  }
+
+  .ms-5 {
+    margin: 0 !important;
+  }
+  .social-items {
+    display: none;
+  }
+}

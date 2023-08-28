@@ -22,6 +22,7 @@ import {ButtonModule} from "primeng/button";
 import {BadgeModule} from "primeng/badge";
 import {CartModule} from "./cart/cart.module";
 import {AngularYandexMapsModule} from "angular8-yandex-maps";
+import {DialogModule} from "primeng/dialog";
 
 @NgModule({
     declarations: [
@@ -49,7 +50,8 @@ import {AngularYandexMapsModule} from "angular8-yandex-maps";
         ButtonModule,
         BadgeModule,
         CartModule,
-      AngularYandexMapsModule
+        AngularYandexMapsModule,
+        DialogModule
     ],
     providers: [],
     exports: [

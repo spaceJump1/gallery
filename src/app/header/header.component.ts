@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {RouterModule} from "@angular/router";
 import {MenuItem} from "primeng/api";
 import { ElementRef } from '@angular/core';

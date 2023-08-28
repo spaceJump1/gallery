@@ -53,3 +53,22 @@
   margin-left: 35px;
 }
 
+@media screen and (max-width: 960px)
+{
+  .image-container img {
+    display:none;
+  }
+
+  .bottom-words {
+    display: none;
+  }
+
+  .bi-header {
+    display: none;
+  }
+
+  .bi-line {
+    display: none;
+  }
+}
+

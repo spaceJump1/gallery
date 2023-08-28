@@ -13,7 +13,10 @@
 .cart-empty {
   font-size: 1.2rem;
   font-weight: bold;
-  
+
+  @media (max-width: 700px) {
+    margin: 20px;
+  }
 }
 
 .item-photo {
@@ -35,6 +38,21 @@
 
 .item-header {
   font-weight: bold;
+
+  @media (max-width: 700px) {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .cart__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-text {
+
+    }
+  }
 }
 
 

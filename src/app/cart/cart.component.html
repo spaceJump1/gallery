@@ -1,4 +1,6 @@
-<h1>Корзина</h1>
+<div class="cart__header">
+  <h1 class="cart__header-text">Корзина</h1>
+</div>
 
 <p-button *ngIf="cartItems.length > 0" label="Очистить корзину" styleClass="p-button-danger" class=""
           (click)="clearCart()"></p-button>
